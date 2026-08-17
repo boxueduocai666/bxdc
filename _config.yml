@@ -1,0 +1,142 @@
+# The Site Configuration
+
+# Import the theme
+theme: jekyll-theme-chirpy
+
+# The language of the webpage
+lang: zh-CN
+
+# Change to your timezone
+timezone: Asia/Shanghai
+
+# jekyll-seo-tag settings
+title: boxueduocai # 主标题
+
+tagline: 后来烟雨皆散尽，无人撑伞一人行 # 副标题
+
+description: >-
+  个人博客，记录生活与技术。
+
+# 域名与根路径设置
+url: 'https://boxueduocai666.github.io'
+baseurl: ''
+
+github:
+  username: boxueduocai666 # 已修正为你的 GitHub 用户名
+
+twitter:
+  username: twitter_username
+
+social:
+  name: boxueduocai
+  email: example@domain.com
+  links:
+    - https://github.com/boxueduocai666
+
+# Web Analytics Settings
+analytics:
+
+# Page views settings
+pageviews:
+
+# Theme Mode
+theme_mode:
+
+# Avatar & Media
+avatar:
+social_preview_image:
+
+# Table of Contents
+toc: true
+
+actions:
+  edit_post:
+    enabled: false
+    url: ""
+    static_url: false
+
+comments:
+  provider:
+
+assets:
+  self_host:
+
+pwa:
+  enabled: true
+  cache:
+    enabled: true
+    deny_paths:
+
+paginate: 10
+
+# ------------ The following options are not recommended to be modified ------------------
+
+kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: true
+      toc: true
+      permalink: /posts/:title/
+  - scope:
+      path: _drafts
+    values:
+      comments: false
+  - scope:
+      path: ""
+      type: tabs
+    values:
+      layout: page
+      permalink: /:title/
+
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - docs
+  - tools
+  - README.md
+  - LICENSE
+  - purgecss.js
+  - "*.config.js"
+  - "package*.json"
+  - "assets/music"
+  - "*.mp3"
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
